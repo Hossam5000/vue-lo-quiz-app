@@ -3,15 +3,15 @@
 import { defineProps } from 'vue';
 
 // cons
-const props = defineProps(['quiz'])
+const props = defineProps(['item'])
 </script>
 
 <template>
     <div class="card">
-        <img :src="quiz.img" :alt="quiz.name">
+        <img :src="item.img" :alt="item.name">
         <div class="card-text">
-            <h2>{{ quiz.name }}</h2>
-            <p>{{ quiz.questions.length }} questions</p>
+            <h2>{{ item.name }}</h2>
+            <p>{{ item.questions.length }} questions</p>
         </div><!--./card-text-->
     </div><!--./card-->
 </template>
