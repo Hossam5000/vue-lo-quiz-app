@@ -2,11 +2,13 @@
 import { createWebHistory, createRouter } from "vue-router";
 
 // --views
-import AppView from '@/App.vue';
+import QuizesView from "@/views/QuizesView.vue";
+import QuizView from "@/views/QuizView.vue";
 
 // cons
 const routes = [
-    { path: "/", name: "home", component: AppView },
+    { path: "/", name: "quizzes", component: QuizesView },
+    { path: "/quiz/:id", name: "quiz", component: QuizView },
 
 ];
 const router = createRouter({

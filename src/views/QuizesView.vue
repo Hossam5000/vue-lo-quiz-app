@@ -31,7 +31,7 @@ watch(search,
 
         <!-- options container -->
         <div class="options-container">
-            <Card v-for="quiz in quizzes" :key="quiz.id" :item="quiz" />
+            <Card v-for="quiz in quizzes" :key="quiz.id" :quiz="quiz" />
         </div><!--./options-container-->
     </div><!--./container-->
 </template>
