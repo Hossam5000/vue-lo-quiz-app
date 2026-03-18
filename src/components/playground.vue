@@ -1,18 +1,22 @@
 <script setup>
-// imports
+import Child from './Child.vue';
 
-// --features
-import { defineProps } from 'vue';
+// imports
+import { ref } from 'vue';
 
 // const
-const props = defineProps(['item']);
+const count = ref(0);
+
+// functions
+const add = (n) => count.value = count.value + n;
 </script>
 
 <template>
+    {{ count }}
     <main>
-        <h1>{{ item.name }}</h1>
-        <p>{{ item.questions.length }}</p>
-        <img :src="item.img" :alt="item.name">
+        <h1>Playground</h1>
+        <p>test the vue features</p>
+        <Child @increaseBy="add" @decreaseBy="(n) => count -= n" />
     </main>
 </template>
 
